@@ -1,0 +1,9 @@
+include LICENSE README.md CONTRIBUTING.md settings.ini
+recursive-include assets *.png *.jpg *.svg
+recursive-include tests/fixtures *.json
+recursive-include tutorials *.py *.ipynb *.csv
+recursive-include dashboard *.py *.md
+
+include README_ProbeHarbour.md UPSTREAM.md
+recursive-include docs *.md
+recursive-include examples *.csv *.py *.ipynb

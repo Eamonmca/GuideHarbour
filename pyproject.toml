@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "probeharbour"
+version = "0.2.0.dev0"
+description = "GuideHarbour: guide-RNA detection probe design, scoring and visualization, adapted from ProbeHarbour"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+authors = [{name = "Eamon McAndrew"}]
+keywords = ["spatial-transcriptomics", "xenium", "probe-design", "isoforms", "scverse"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = ["pandas>=1.5"]
+
+[project.urls]
+Homepage = "https://github.com/Eamonmca/GuideHarbour"
+Repository = "https://github.com/Eamonmca/GuideHarbour"
+Issues = "https://github.com/Eamonmca/GuideHarbour/issues"
+
+[project.optional-dependencies]
+thermo = ["primer3-py>=2"]
+guides = ["primer3-py>=2", "matplotlib>=3.6"]
+guide-ui = ["primer3-py>=2", "matplotlib>=3.6", "streamlit>=1.50"]
+io = ["pyarrow>=12"]
+plot = ["matplotlib>=3.6"]
+transcripts = ["allos @ git+https://github.com/cobioda/allos.git@main"]
+dashboard = [
+  "matplotlib>=3.6",
+  "streamlit>=1.40",
+  "pyarrow>=12",
+  "primer3-py>=2",
+  "allos @ git+https://github.com/cobioda/allos.git@main",
+]
+test = ["pytest>=8", "matplotlib>=3.6", "pyarrow>=12", "primer3-py>=2"]
+dev = ["nbdev>=2.3,<3", "jupytext>=1.17", "build>=1", "twine>=5", "pytest>=8"]
+all = [
+  "matplotlib>=3.6",
+  "streamlit>=1.40",
+  "pyarrow>=12",
+  "primer3-py>=2",
+  "allos @ git+https://github.com/cobioda/allos.git@main",
+]
+
+[project.scripts]
+guideharbour-design = "probeharbour.guide_cli:main"
+guideharbour-dashboard = "probeharbour._guide_dashboard_launcher:main"
+probeharbour-dashboard = "probeharbour._dashboard_launcher:main"
+probeharbour-dashboard-demo = "probeharbour._dashboard_demo_launcher:main"
+
+[tool.setuptools.packages.find]
+include = ["probeharbour*"]
+
+[tool.setuptools.package-data]
+probeharbour = ["rulesets/*.json", "data/*.csv", "assets/*.png"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -1,0 +1,18 @@
+{
+  "ruleset_id": "prime-5k-current-v1",
+  "chemistry": "Prime 5K",
+  "formula": "score = ligbase_score / (1 + number_of_active_modifiers)",
+  "scoring": {"strategy": "divide_by_modifier_count"},
+  "ligbase_scores": {
+    "AA": 1.0, "AC": 0.132925, "AG": 0.375875, "AT": 0.3914,
+    "CA": 0.2686, "CC": 0.028125, "CG": 0.297, "CT": 0.048525,
+    "GA": 0.606525, "GC": 0.013, "GG": 0.0356, "GT": 0.1082,
+    "TA": 0.564125, "TC": 0.416475, "TG": 0.331325, "TT": 0.369325
+  },
+  "modifiers": {
+    "does_not_meet_tm_constraints": {"type": "range", "field": "tm_full", "min": 71.0, "max": 77.0},
+    "has_simple_repeat": {"type": "boolean", "field": "has_simple_repeat"},
+    "has_5g_repeat": {"type": "boolean", "field": "has_5g_repeat"},
+    "potential_homodimer": {"type": "threshold", "field": "p3_homodimer_dg", "value": -10.5}
+  }
+}

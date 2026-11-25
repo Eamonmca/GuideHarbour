@@ -1,0 +1,59 @@
+{
+  "prime5k_mouse_panel_Ank2_cw13191_ps1": {
+    "source_panel": "Prime 5K mouse",
+    "probe_name": "panel_Ank2_cw13191_ps1",
+    "candidate_id": "prime5k_mouse_panel_Ank2_cw13191_ps1",
+    "lig_dinuc": "TA",
+    "raw_design_score": 1.0,
+    "tm_full": 71.2,
+    "p3_homodimer_dg": -4.097,
+    "has_simple_repeat": false,
+    "has_5g_repeat": false,
+    "on_junction": true,
+    "junction_spanning": true,
+    "panel_spacing_violation": false
+  },
+  "v1_mouse_panel_Aldh1a2_cw379_ps1": {
+    "source_panel": "Xenium V1 mouse",
+    "probe_name": "panel_Aldh1a2_cw379_ps1",
+    "candidate_id": "v1_mouse_panel_Aldh1a2_cw379_ps1",
+    "lig_dinuc": "GA",
+    "raw_design_score": 0.5,
+    "tm_full": 76.6,
+    "p3_homodimer_dg": -0.977,
+    "has_simple_repeat": false,
+    "has_5g_repeat": false,
+    "on_junction": true,
+    "junction_spanning": true,
+    "panel_spacing_violation": false
+  },
+  "panel96_Ptbp2_ex10": {
+    "source_panel": "96-probe validation panel",
+    "probe_name": "Ptbp2_ex10",
+    "candidate_id": "panel96_Ptbp2_ex10",
+    "lig_dinuc": "TC",
+    "raw_design_score": 0.42,
+    "tm_full": 71.6,
+    "p3_homodimer_dg": -1.705,
+    "has_simple_repeat": false,
+    "has_5g_repeat": false,
+    "on_junction": true,
+    "junction_spanning": true,
+    "panel_spacing_violation": false
+  },
+  "synthetic_incomplete_spacing_evidence": {
+    "source_panel": "test-only synthetic audit case",
+    "candidate_id": "synthetic_incomplete_spacing_evidence",
+    "lig_dinuc": "AA",
+    "raw_design_score": 1.0,
+    "tm_full": 74.0,
+    "p3_homodimer_dg": -2.0,
+    "has_simple_repeat": false,
+    "has_5g_repeat": false,
+    "on_junction": false,
+    "junction_spanning": true,
+    "panel_spacing_violation": true,
+    "nearest_same_panel_probe_distance": null,
+    "nearest_same_panel_probe_name": null
+  }
+}

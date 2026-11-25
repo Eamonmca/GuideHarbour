@@ -1,0 +1,34 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+build/
+dist/
+_docs/
+figures/
+internal_tests/
+*.log
+.DS_Store
+
+# Local reference data, BLAST databases and generated ProbeStores are not source code.
+data/
+stores/
+*.parquet
+*.pkl
+*.pickle
+
+# Small, intentional package/tutorial examples are versioned.
+!probeharbour/data/
+!probeharbour/data/96ISOS.csv
+!tutorials/data/
+!tutorials/data/96ISOS.csv
+
+# Guide design inputs shipped deliberately with this personal adaptation.
+!probeharbour/data/example_guides.csv
+# Reproducible local reports and runtime outputs.
+guide_results*/

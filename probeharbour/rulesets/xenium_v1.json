@@ -1,0 +1,23 @@
+{
+  "ruleset_id": "xenium-v1-current-v1",
+  "chemistry": "Xenium V1",
+  "formula": "score = ligbase_score / (1 + number_of_active_modifiers)",
+  "scoring": {"strategy": "divide_by_modifier_count"},
+  "ligbase_scores": {
+    "AA": 0.5, "AC": 0.5, "AG": 1.0, "AT": 1.0,
+    "CA": 0.5, "CC": 0.5, "CG": 0.05, "CT": 0.5,
+    "GA": 1.0, "GC": 0.05, "GG": 0.05, "GT": 0.05,
+    "TA": 1.0, "TC": 0.5, "TG": 0.5, "TT": 0.5
+  },
+  "ligbase_tiers": {
+    "preferred": ["AG", "AT", "GA", "TA"],
+    "neutral": ["AA", "AC", "CA", "CC", "CT", "TC", "TG", "TT"],
+    "non_preferred": ["CG", "GC", "GG", "GT"]
+  },
+  "modifiers": {
+    "does_not_meet_tm_constraints": {"type": "range", "field": "tm_full", "min": 68.0, "max": 82.0},
+    "has_simple_repeat": {"type": "boolean", "field": "has_simple_repeat"},
+    "has_5g_repeat": {"type": "boolean", "field": "has_5g_repeat"},
+    "potential_homodimer": {"type": "threshold", "field": "p3_homodimer_dg", "value": -10.5}
+  }
+}
